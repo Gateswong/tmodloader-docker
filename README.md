@@ -30,7 +30,7 @@ After setting up your mods, and optionally setting up a world, press `Ctrl+C` to
 
 You can also skip this step and [directly] download your mods. Place the mod files in your `data/ModLoader/Mods` folder and make sure to enable them in the `data/ModLoader/Mods/enabled.json` file.
 
-# Use Existing World File
+# Use Existing World
 
 If you have generated a world file following steps in "Initial Setup" section, or have put your world file in `data/ModLoader/Worlds`, use the following line in `config.txt` to let server automatically load this world:
 
