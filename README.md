@@ -2,7 +2,7 @@
 
 [tModLoader] dedicated server  
 
-Terraria server 1.3.5.3 with tModLoader v0.11.7.3.
+Terraria server 1.3.5.3 with tModLoader v0.11.7.4.
 
 Supports graceful shutdown (saves when the container receives a stop command) and also supports autosaving every 10 minutes (configurable, see [Environment Variables] below).
 
@@ -29,6 +29,14 @@ If you want to use the server's mod browser to install and enable mods, run an i
 After setting up your mods, and optionally setting up a world, press `Ctrl+C` to exit the container. Then you can use the normal docker command to run your server. Note that you'll see the mods and the `enabled.json` files appear in your mods folder on the host.
 
 You can also skip this step and [directly] download your mods. Place the mod files in your `data/ModLoader/Mods` folder and make sure to enable them in the `data/ModLoader/Mods/enabled.json` file.
+
+# Use Existing World File
+
+If you have generated a world file following steps in "Initial Setup" section, or have put your world file in `data/ModLoader/Worlds`, use the following line in `config.txt` to let server automatically load this world:
+
+    world=/terraria/ModLoader/Worlds/YourWorldFile.wld
+    
+You can still add this file without having such file in that position. In that case, a new world with this name will be generated.
 
 # Sending Commands to the Server
 
@@ -75,7 +83,7 @@ TMOD_IDLE_CHECK_OFFSET   | 0              | This allows for sub-minute resolutio
 [tModLoader]: https://www.tmodloader.net/
 [wiki]: https://terraria.gamepedia.com/Server#Server_config_file
 [commands]: https://terraria.gamepedia.com/Server#List_of_console_commands
-[tMod Version]: https://img.shields.io/badge/tMod-0.11.7.3-blue
+[tMod Version]: https://img.shields.io/badge/tMod-0.11.7.4-blue
 [Terraria Version]: https://img.shields.io/badge/Terraria-1.3.5.3-blue
 [Docker Stars]: https://img.shields.io/docker/stars/rfvgyhn/tmodloader.svg
 [Docker Pulls]: https://img.shields.io/docker/pulls/rfvgyhn/tmodloader.svg
